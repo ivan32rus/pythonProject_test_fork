@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Все ссылки{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>Все ссылки</h1>
+
+    {% if articles|length > 0 %}
+
+        {% for el in articles %}
+        <div class="alert alert-info">
+            <h5>{{ el.url }}</h5>
+            <a href="/urlshorts/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Нет сгенерированных ссылок</p>
+    {% endif %}
+</div>
+{% endblock %}

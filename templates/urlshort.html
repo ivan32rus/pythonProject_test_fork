@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Генератор ссылок{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>Генератор ссылок</h1>
+    <form method="post">
+        <input  name="url" id="url" class="form-control" placeholder="введите ссылку" required><br>
+
+        <input type="submit" class="btn btn-success" value="ShortUrl">
+    </form>
+</div>
+{% endblock %}
